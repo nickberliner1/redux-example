@@ -1,19 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default class Posts extends React.Component {
+import { fetchPosts } from '../actions/postActions';
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            posts: []
-        }
-    }
+class Posts extends React.Component {
 
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/posts')
-            .then(res => res.json())
-            .then(data => this.setState({ posts: data }));
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         posts: []
+    //     }
+    // }
+
+    // componentDidMount() {
+    //     fetch('https://jsonplaceholder.typicode.com/posts')
+    //         .then(res => res.json())
+    //         .then(data => this.setState({ posts: data }));
+    // }
 
     render() {
 
@@ -32,3 +35,5 @@ export default class Posts extends React.Component {
         )
     }
 }
+
+export default connect(null, { fetchPosts })(Posts);

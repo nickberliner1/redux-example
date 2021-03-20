@@ -22,8 +22,10 @@ class Posts extends React.Component {
         this.props.fetchPosts();
     }
 
-    static getDerivedStateFromProps() {
-
+    componentDidUpdate(nextProps) {
+        if ( nextProps.newPost ) {
+            this.props.posts.unshift(nextProps.newPost);
+        }
     }
 
     render() {

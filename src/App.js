@@ -13,7 +13,9 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <header className="App-header">
+          <div className="new-logo">
           <img src={logo} className="App-logo" alt="logo" />
+          </div>
         </header>
         <PostForm />
         <hr />

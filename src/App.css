@@ -3,19 +3,30 @@
   margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.post-form {
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-  }
+.App-logo {
+  height: 40vmin;
+  /* pointer-events: none; */
+}
+
+.App-logo {
+  animation-name: App-logo-spin;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-play-state: paused;
+}
+
+.new-logo:hover .App-logo {
+  animation-play-state: running;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;

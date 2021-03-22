@@ -15,9 +15,8 @@
 .App-logo {
   animation-name: App-logo-spin;
   animation-iteration-count: infinite;
-  animation-duration: 0.5s;
+  animation-duration: 2s;
   animation-timing-function: linear;
-  animation-direction: alternate;
   animation-play-state: paused;
 }
 
@@ -27,6 +26,7 @@
 
 .new-logo:hover g {
   fill: #61dafb;
+  stroke: #61dafb;
 }
 
 .App-header {
@@ -47,5 +47,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+svg path {
+  stroke-dasharray: 2460;
+  stroke-dashoffset: 2460;
+  animation: draw 3s forwards;
+}
+
+svg g {
+  fill-opacity: 0;
+  animation: fill-in 2s 1s forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-in {
+  to {
+    fill-opacity: 1;
   }
 }
